@@ -45,7 +45,7 @@ ggp_den_hrdl <- function(
   data |> ggplot2::ggplot(
     mapping = ggplot2::aes(x = .data[[x_var]], color = .data[[id_var]], fill = .data[[id_var]])
   ) +
-    ggplot2::geom_density(ggplot2::aes(y = ggplot2::after_stat("scaled")),
+    ggplot2::geom_density(ggplot2::aes(y = ggplot2::after_stat(scaled)),
       linewidth = 1, alpha = 0.5, na.rm = TRUE
     ) +
     ggplot2::scale_x_continuous(
