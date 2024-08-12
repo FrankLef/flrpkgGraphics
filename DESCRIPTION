@@ -14,7 +14,17 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
+    checkmate,
     cli,
-    rlang
+    dplyr,
+    forcats,
+    ggplot2,
+    ggthemes,
+    hrbrthemes,
+    patchwork,
+    purrr,
+    rlang,
+    scales,
+    tidyselect
 URL: https://github.com/FrankLef/flrpkgGraphics
 BugReports: https://github.com/FrankLef/flrpkgGraphics/issues
