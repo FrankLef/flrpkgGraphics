@@ -1,11 +1,20 @@
 Package: flrpkgGraphics
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Graphics utilities used by Ephel
+Version: 0.0.0.9000
+Authors@R: 
+    person("François", "Lefebvre", , "flefebvre01@hotmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Graphics utilities used by Ephel. It includes functions and object
+    such as themes, plots, etc.
+License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    cli,
+    rlang
+URL: https://github.com/FrankLef/flrpkgGraphics
+BugReports: https://github.com/FrankLef/flrpkgGraphics/issues
