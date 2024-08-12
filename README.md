@@ -19,5 +19,5 @@ You can install the development version of `flrpkgGraphics` from
 
 ``` r
 install.packages("pak")
-pak::pkg_install("FrankLef/flrpkgGraphics")
+pak::pkg_install("https://github.com/FrankLef/flrpkgGraphics.git")
 ```
