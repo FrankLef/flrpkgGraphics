@@ -19,7 +19,7 @@
 #' TODO
 #' }
 ggp_den_hrdl_many <- function(
-    data, cols, vals, fun = identity, thm = ggp_thm_tufte, titles) {
+    data, cols, vals, fun = identity, thm, titles) {
   checkmate::assert_data_frame(data, min.rows = 1, min.cols = 2)
   checkmate::assert_character(cols, min.len = 1, any.missing = FALSE)
   checkmate::assert_character(vals, len = 2, any.missing = FALSE)

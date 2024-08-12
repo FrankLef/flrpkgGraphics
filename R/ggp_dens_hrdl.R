@@ -12,7 +12,7 @@
 #' Very common to use \code{ceiling(flrpkgTools::expm1s())}.
 #' @param thm The ggplot theme.
 #'
-#' @return Object of class \code{gg}.
+#' @return Object of class \code{patchwork, gg}.
 #' @export
 #'
 #' @examples
@@ -20,7 +20,7 @@
 #' TODO
 #' }
 ggp_den_hrdl <- function(
-    data, x_var, flag_var, vals, fun = identity, thm = ggp_thm_tufte) {
+    data, x_var, flag_var, vals, fun = identity, thm) {
   checkmate::assert_data_frame(data, min.rows = 1, min.cols = 2)
   checkmate::assert_string(x_var)
   checkmate::assert_string(flag_var)

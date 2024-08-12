@@ -4,7 +4,7 @@
 \alias{ggp_den_hrdl}
 \title{Density plot for hurdle analysis}
 \usage{
-ggp_den_hrdl(data, x_var, flag_var, vals, fun = identity, thm = ggp_thm_tufte)
+ggp_den_hrdl(data, x_var, flag_var, vals, fun = identity, thm)
 }
 \arguments{
 \item{data}{Data.fame.}
@@ -21,7 +21,7 @@ Very common to use \code{ceiling(flrpkgTools::expm1s())}.}
 \item{thm}{The ggplot theme.}
 }
 \value{
-Object of class \code{gg}.
+Object of class \code{patchwork, gg}.
 }
 \description{
 Density plot for hurdle analysis.

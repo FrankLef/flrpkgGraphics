@@ -4,14 +4,7 @@
 \alias{ggp_den_hrdl_many}
 \title{Many density plots for hurdle analysis}
 \usage{
-ggp_den_hrdl_many(
-  data,
-  cols,
-  vals,
-  fun = identity,
-  thm = ggp_thm_tufte,
-  titles
-)
+ggp_den_hrdl_many(data, cols, vals, fun = identity, thm, titles)
 }
 \arguments{
 \item{data}{Data.fame.}
