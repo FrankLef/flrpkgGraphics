@@ -26,8 +26,8 @@ and plot to be used by Ephel.
 
 You can install the development version of `flrpkgGraphics` from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("pak")
-# pak::pkg_install("FrankLef/flrpkgGraphics")
+``` {r eval=FALSE}
+install.packages("pak")
+pak::pkg_install("FrankLef/flrpkgGraphics")
 ```
 

@@ -18,6 +18,6 @@ You can install the development version of `flrpkgGraphics` from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
-# pak::pkg_install("FrankLef/flrpkgGraphics")
+install.packages("pak")
+pak::pkg_install("FrankLef/flrpkgGraphics")
 ```
