@@ -1,18 +1,31 @@
-# Hello, world!
-#
-# This is an example function named 'hello' 
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   https://r-pkgs.org
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
-
-hello <- function() {
-  print("Hello, world!")
+#' Print "Hello" message to console
+#'
+#' Print message that begins with "Hello" to console.
+#'
+#' This function is used for testing. The setup of \code{rnlang::abort()}
+#' inside is useful.
+#'
+#' @param msg Message to print.
+#'
+#' @return Message, invisibly.
+#'
+#' @import cli rlang
+#'
+#' @export
+#'
+#' @examples
+#' hello()
+hello <- function(msg = "Hello, world!") {
+  if (grepl(pattern = "^hello.*", x = msg, ignore.case = TRUE)) {
+    message(msg)
+  } else {
+    msg_head <- cli::col_red("Message must start with \"hello\"")
+    msg_body <- c("i" = sprintf("Message: %s", msg))
+    msg <- paste(msg_head, rlang::format_error_bullets(msg_body), sep = "\n")
+    rlang::abort(
+      message = msg,
+      class = "ValueError"
+    )
+  }
+  invisible(msg)
 }
