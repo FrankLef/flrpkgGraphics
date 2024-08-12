@@ -18,7 +18,8 @@
 #' \dontrun{
 #' TODO
 #' }
-ggp_den_hrdl_many <- function(data, cols, vals, titles) {
+ggp_den_hrdl_many <- function(
+    data, cols, vals, fun = identity, thm = ggp_thm_tufte, titles) {
   checkmate::assert_data_frame(data, min.rows = 1, min.cols = 2)
   checkmate::assert_character(cols, min.len = 1, any.missing = FALSE)
   checkmate::assert_character(vals, len = 2, any.missing = FALSE)
@@ -27,7 +28,9 @@ ggp_den_hrdl_many <- function(data, cols, vals, titles) {
     .x = names(cols), .y = unname(cols),
     .f = function(x, y) {
       data |>
-        flrpkgGraphics::ggp_den_hrdl(x_var = x, flag_var = y, vals = vals)
+        flrpkgGraphics::ggp_den_hrdl(
+          x_var = x, flag_var = y, vals = vals, fun = identity, thm = thm
+        )
     }
   )
   names(out) <- names(cols)

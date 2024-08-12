@@ -4,7 +4,14 @@
 \alias{ggp_den_hrdl_many}
 \title{Many density plots for hurdle analysis}
 \usage{
-ggp_den_hrdl_many(data, cols, vals, titles)
+ggp_den_hrdl_many(
+  data,
+  cols,
+  vals,
+  fun = identity,
+  thm = ggp_thm_tufte,
+  titles
+)
 }
 \arguments{
 \item{data}{Data.fame.}
@@ -13,6 +20,11 @@ ggp_den_hrdl_many(data, cols, vals, titles)
 and the string are the name of the falg variables.}
 
 \item{vals}{Named character() with colors.}
+
+\item{fun}{Function used to transform the data. Default is \code{identity}.
+Very common to use \code{ceiling(flrpkgTools::expm1s())}.}
+
+\item{thm}{The ggplot theme.}
 
 \item{titles}{List of titles used by \code{labs}.}
 }
