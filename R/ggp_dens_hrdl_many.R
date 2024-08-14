@@ -29,7 +29,7 @@ ggp_den_hrdl_many <- function(
     .f = function(x, y) {
       data |>
         flrpkgGraphics::ggp_den_hrdl(
-          x_var = x, flag_var = y, vals = vals, fun = identity, thm = thm
+          x_var = x, flag_var = y, vals = vals, fun = fun, thm = thm
         )
     }
   )

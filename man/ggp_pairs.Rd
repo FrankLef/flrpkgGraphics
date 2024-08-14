@@ -15,7 +15,7 @@ ggp_pairs(data, columns, color_var, pal, thm, titles)
 
 \item{pal}{Color to use by \code{color_var}.}
 
-\item{thm}{Theme to use.}
+\item{thm}{Function or an object of class \code{theme}.}
 
 \item{titles}{List of titles.}
 }

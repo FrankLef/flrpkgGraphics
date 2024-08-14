@@ -33,18 +33,23 @@ ggp_thm_clean <- function(base_theme,
   checkmate::assert_function(base_theme)
   checkmate::assert_string(base_family, min.chars = 1)
 
-
   base_theme(base_family = base_family) +
     ggplot2::theme(
       title = ggplot2::element_text(color = title_colr),
       legend.position = legend$position,
-      strip.text = ggplot2::element_text(face = strip_text$face, color = strip_text$color),
+      strip.text = ggplot2::element_text(
+        face = strip_text$face, color = strip_text$color
+      ),
       strip.background = ggplot2::element_rect(fill = strip_colr$bgfill),
       panel.border = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_blank(),
       panel.grid.minor = ggplot2::element_blank(),
-      panel.background = ggplot2::element_rect(fill = panel_colr$fill, color = panel_colr$color),
-      plot.background = ggplot2::element_rect(fill = plot_colr$fill, color = plot_colr$color),
+      panel.background = ggplot2::element_rect(
+        fill = panel_colr$fill, color = panel_colr$color
+      ),
+      plot.background = ggplot2::element_rect(
+        fill = plot_colr$fill, color = plot_colr$color
+      ),
       complete = TRUE
     )
 }
