@@ -6,7 +6,7 @@
 #' the \emph{tufte} ethics of graphics.
 #'
 #'
-#' @param base_theme Obobject of class \code{theme}.
+#' @param base_theme Base theme build upon.
 #' @param base_family String of font family used.
 #' @param legend List with legend parameters.
 #' @param title_colr String with title's color.
@@ -30,7 +30,6 @@ ggp_thm_clean <- function(base_theme,
                           strip_text = list(face = "bold", color = "darkblue"),
                           panel_colr = list(fill = "snow", color = "snow"),
                           plot_colr = list(fill = "ghostwhite", color = "ghostwhite")) {
-  checkmate::assert_class(base_theme, classes = c("theme"))
 
   base_theme +
     ggplot2::theme(
