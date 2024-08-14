@@ -1,9 +1,12 @@
-#' GGplot \emph{clean theme} with \code{hrbrthemes::theme_ipsum}
+#' \pkg{ggplot2} \emph{clean theme} with light nice colors
 #'
-#' GGplot \emph{clean theme} with \code{hrbrthemes::theme_ipsum}.
+#' \pkg{ggplot2} \emph{clean theme} with light nice colors.
 #'
-#' Use the \code{hrbrthemes::theme_ipsum} with a clean format.
+#' The clean format uses light colors and reduces visual distraction much like
+#' the \emph{tufte} ethics of graphics.
 #'
+#'
+#' @param base_theme Obobject of class \code{theme}.
 #' @param base_family String of font family used.
 #' @param legend List with legend parameters.
 #' @param title_colr String with title's color.
@@ -19,14 +22,17 @@
 #' \dontrun{
 #' TODO
 #' }
-ggp_thm_hrclean <- function(base_family = "Noto Sans Display",
-                            legend = list(position = "none"),
-                            title_colr = "midnightblue",
-                            strip_colr = list(bgfill = "gainsboro"),
-                            strip_text = list(face = "bold", color = "darkblue"),
-                            panel_colr = list(fill = "snow", color = "snow"),
-                            plot_colr = list(fill = "ghostwhite", color = "ghostwhite")) {
-  hrbrthemes::theme_ipsum(base_family = base_family) +
+ggp_thm_clean <- function(base_theme,
+                          base_family = "Noto Sans Display",
+                          legend = list(position = "none"),
+                          title_colr = "midnightblue",
+                          strip_colr = list(bgfill = "gainsboro"),
+                          strip_text = list(face = "bold", color = "darkblue"),
+                          panel_colr = list(fill = "snow", color = "snow"),
+                          plot_colr = list(fill = "ghostwhite", color = "ghostwhite")) {
+  checkmate::assert_class(base_theme, classes = c("theme"))
+
+  base_theme +
     ggplot2::theme(
       title = ggplot2::element_text(color = title_colr),
       legend.position = legend$position,

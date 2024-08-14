@@ -20,8 +20,6 @@ Imports:
     forcats,
     GGally,
     ggplot2,
-    ggthemes,
-    hrbrthemes,
     patchwork,
     purrr,
     rlang,
