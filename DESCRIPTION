@@ -4,15 +4,13 @@ Version: 0.0.0.9000
 Authors@R: 
     person("François", "Lefebvre", , "flefebvre01@hotmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Graphics utilities used by Ephel. It includes functions and object
-    such as themes, plots, etc.
+Description: Graphics utilities used by Ephel. It includes functions and
+    object such as themes, plots, etc.
 License: MIT + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-Suggests: 
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
+URL: https://github.com/FrankLef/flrpkgGraphics
+BugReports: https://github.com/FrankLef/flrpkgGraphics/issues
+Depends:
+    R (>= 3.5.0)
 Imports: 
     checkmate,
     cli,
@@ -21,9 +19,14 @@ Imports:
     GGally,
     ggplot2,
     patchwork,
+    plotly,
     purrr,
     rlang,
     scales,
     tidyselect
-URL: https://github.com/FrankLef/flrpkgGraphics
-BugReports: https://github.com/FrankLef/flrpkgGraphics/issues
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

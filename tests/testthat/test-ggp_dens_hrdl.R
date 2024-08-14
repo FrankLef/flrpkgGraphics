@@ -3,7 +3,6 @@ test_that("ggp_dens_hrdl", {
   # cat("\n", "a_file", "\n")
   # print(a_file)
   data <- readRDS(a_file)
-  # str(data)
 
   x_var <- "vente_tot_lg"
   flag_var <- "vente_tot_lg_oob"
@@ -11,13 +10,17 @@ test_that("ggp_dens_hrdl", {
   fun <- base::expm1
   thm <- ggplot2::theme_minimal
 
-  p <- ggp_den_hrdl(
+  out <- ggp_den_hrdl(
     data,
     x_var = x_var, flag_var = flag_var, vals = vals,
     fun = fun, thm = thm
   )
 
+  expect_s3_class(out, class = "gg")
+
   expect_snapshot(
-    ggplot2::layer_data(p)
+    ggplot2::layer_data(out)
   )
 })
+
+# testthat::snapshot_accept('ggp_dens_hrdl')

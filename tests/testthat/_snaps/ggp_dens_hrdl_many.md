@@ -1,7 +1,7 @@
 # ggp_dens_hrdl_many
 
     Code
-      ggplot2::layer_data(p)
+      ggplot2::layer_data(out)
     Output
                         fill            colour            y           x      density
       1    mediumspringgreen mediumspringgreen 3.523631e-04 0.000000000 2.183453e-04

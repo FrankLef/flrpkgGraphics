@@ -15,12 +15,16 @@ test_that("ggp_dens_hrdl_many", {
   thm <- ggplot2::theme_minimal
   titles <- list(title = "Main Title", subtitle = "A subtitle")
 
-  p <- ggp_den_hrdl_many(
+  out <- ggp_den_hrdl_many(
     data,
     cols = cols, vals = vals, fun = fun, thm = thm, titles = titles
   )
 
+  expect_s3_class(out, class = "patchwork")
+
   expect_snapshot(
-    ggplot2::layer_data(p)
+    ggplot2::layer_data(out)
   )
 })
+
+# testthat::snapshot_accept('ggp_dens_hrdl_many')

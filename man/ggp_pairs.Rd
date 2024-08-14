@@ -26,7 +26,7 @@ Object of class \code{gg}.
 Matrix of plots with a given data set.
 }
 \details{
-Matrix of plots with density plot on the diagonal, scaterr plots on
+Matrix of plots with density plot on the diagonal, scatter plots on
 lower triangle and correlations on upper triangle.
 }
 \examples{

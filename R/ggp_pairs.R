@@ -2,7 +2,7 @@
 #'
 #' Matrix of plots with a given data set.
 #'
-#' Matrix of plots with density plot on the diagonal, scaterr plots on
+#' Matrix of plots with density plot on the diagonal, scatter plots on
 #' lower triangle and correlations on upper triangle.
 #'
 #' @param data Data.frame.
