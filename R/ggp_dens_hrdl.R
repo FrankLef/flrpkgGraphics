@@ -26,6 +26,8 @@ ggp_den_hrdl <- function(
   checkmate::assert_string(flag_var)
   checkmate::assert_character(vals, len = 2)
 
+  if (is.function(thm)) thm <- thm()
+
   id_var <- "id"
 
   data <- ggp_den_hrdl_df(data,
@@ -57,11 +59,7 @@ ggp_den_hrdl <- function(
     ) +
     ggplot2::scale_fill_manual(values = vals) +
     ggplot2::scale_color_manual(values = vals) +
-    if (is.function(thm)) {
-      thm()
-    } else {
-      thm
-    } +
+    thm +
     ggplot2::labs(
       title = sprintf("Distribution of %s", x_var),
       subtitle = sprintf(
