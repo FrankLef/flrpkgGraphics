@@ -16,7 +16,7 @@ ggp_thm_clean(
 )
 }
 \arguments{
-\item{base_theme}{Base theme build upon.}
+\item{base_theme}{Function returning the base theme build upon.}
 
 \item{base_family}{String of font family used.}
 

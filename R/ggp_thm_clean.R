@@ -6,7 +6,7 @@
 #' the \emph{tufte} ethics of graphics.
 #'
 #'
-#' @param base_theme Base theme build upon.
+#' @param base_theme Function returning the base theme build upon.
 #' @param base_family String of font family used.
 #' @param legend List with legend parameters.
 #' @param title_colr String with title's color.
@@ -30,6 +30,9 @@ ggp_thm_clean <- function(base_theme,
                           strip_text = list(face = "bold", color = "darkblue"),
                           panel_colr = list(fill = "snow", color = "snow"),
                           plot_colr = list(fill = "ghostwhite", color = "ghostwhite")) {
+  checkmate::assert_function(base_theme)
+  checkmate::assert_string(base_family, min.chars = 1)
+
 
   base_theme(base_family = base_family) +
     ggplot2::theme(
