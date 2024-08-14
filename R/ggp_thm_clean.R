@@ -31,7 +31,7 @@ ggp_thm_clean <- function(base_theme,
                           panel_colr = list(fill = "snow", color = "snow"),
                           plot_colr = list(fill = "ghostwhite", color = "ghostwhite")) {
 
-  base_theme +
+  base_theme(base_family = base_family) +
     ggplot2::theme(
       title = ggplot2::element_text(color = title_colr),
       legend.position = legend$position,
