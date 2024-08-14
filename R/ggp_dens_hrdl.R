@@ -57,7 +57,11 @@ ggp_den_hrdl <- function(
     ) +
     ggplot2::scale_fill_manual(values = vals) +
     ggplot2::scale_color_manual(values = vals) +
-    thm() +
+    if (is.function(thm)) {
+      thm()
+    } else {
+      thm
+    } +
     ggplot2::labs(
       title = sprintf("Distribution of %s", x_var),
       subtitle = sprintf(
