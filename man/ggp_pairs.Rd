@@ -4,7 +4,7 @@
 \alias{ggp_pairs}
 \title{Matrix of plots with a given data set}
 \usage{
-ggp_pairs(data, columns, color_var, pal, thm, titles)
+ggp_pairs(data, columns, color_var, pal, titles)
 }
 \arguments{
 \item{data}{Data.frame.}
@@ -14,8 +14,6 @@ ggp_pairs(data, columns, color_var, pal, thm, titles)
 \item{color_var}{Variable to use to color by group.}
 
 \item{pal}{Color to use by \code{color_var}.}
-
-\item{thm}{Function or an object of class \code{theme}.}
 
 \item{titles}{List of titles.}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggp_dens_hrdl_many.R
 \name{ggp_den_hrdl_many}
 \alias{ggp_den_hrdl_many}
-\title{Many density plots for hurdle analysis}
+\title{Many density plots created with \code{ggp_den_hrdl} for hurdle analysis}
 \usage{
 ggp_den_hrdl_many(data, cols, vals, fun = identity, thm, titles)
 }
@@ -17,7 +17,7 @@ and the string are the name of the falg variables.}
 \item{fun}{Function used to transform the data. Default is \code{identity}.
 Very common to use \code{ceiling(flrpkgTools::expm1s())}.}
 
-\item{thm}{The ggplot theme.}
+\item{thm}{Theme used by \code{ggp_den_hrdl}.}
 
 \item{titles}{List of titles used by \code{labs}.}
 }
@@ -25,7 +25,7 @@ Very common to use \code{ceiling(flrpkgTools::expm1s())}.}
 Object of class \code{gg}.
 }
 \description{
-Many density plots for hurdle analysis.
+Many density plots created with \code{ggp_den_hrdl} for hurdle analysis.
 }
 \details{
 Many density plots for hurdle analysis all joined together using
@@ -35,4 +35,7 @@ Many density plots for hurdle analysis all joined together using
 \dontrun{
 TODO
 }
+}
+\seealso{
+\link{ggp_den_hrdl}
 }

@@ -10,7 +10,6 @@
 #' @param vals Named character() with colors.
 #' @param fun Function used to transform the data. Default is \code{identity}.
 #' Very common to use \code{ceiling(flrpkgTools::expm1s())}.
-#' @param thm The ggplot theme.
 #'
 #' @return Object of class \code{patchwork, gg}.
 #' @export
@@ -20,13 +19,11 @@
 #' TODO
 #' }
 ggp_den_hrdl <- function(
-    data, x_var, flag_var, vals, fun = identity, thm) {
+    data, x_var, flag_var, vals, fun = identity) {
   checkmate::assert_data_frame(data, min.rows = 1, min.cols = 2)
   checkmate::assert_string(x_var)
   checkmate::assert_string(flag_var)
   checkmate::assert_character(vals, len = 2)
-
-  if (is.function(thm)) thm <- thm()
 
   id_var <- "id"
 
@@ -59,7 +56,6 @@ ggp_den_hrdl <- function(
     ) +
     ggplot2::scale_fill_manual(values = vals) +
     ggplot2::scale_color_manual(values = vals) +
-    thm +
     ggplot2::labs(
       title = sprintf("Distribution of %s", x_var),
       subtitle = sprintf(

@@ -10,7 +10,6 @@
 #' @param color_var Variable to use to color by group.
 #' @param pal Color to use by \code{color_var}.
 #' @param titles List of titles.
-#' @param thm Function or an object of class \code{theme}.
 #'
 #' @return Object of class \code{gg}.
 #'
@@ -22,9 +21,7 @@
 #' \dontrun{
 #' TODO
 #' }
-ggp_pairs <- function(data, columns, color_var, pal, thm, titles) {
-  # useful line when using a loop
-  if (is.function(thm)) thm <- thm()
+ggp_pairs <- function(data, columns, color_var, pal, titles) {
 
   # draw the density lines on the diagonal
   myline <- function(data, mapping) {
@@ -41,6 +38,5 @@ ggp_pairs <- function(data, columns, color_var, pal, thm, titles) {
     ggplot2::labs(
       title = titles$title,
       subtitle = titles$subtitle
-    ) +
-    thm
+    )
 }

@@ -7,15 +7,13 @@ test_that("ggp_pairs", {
   cols <- cols <- c("vente_tot_lg", "vente_qte_lg", "jobs_work_hrs_lg")
   color_var <- "prune_id"
   pal <- c("lightseagreen", "violetred", "gold")
-  thm <- ggplot2::theme_minimal
   titles <- list(
     title = "Data Analysis in Pairs",
     subtitle = sprintf("%d observations.", nrow(data))
   )
 
   p <- ggp_pairs(data,
-    columns = cols, color_var = color_var,
-    pal = pal, thm = thm, titles = titles
+    columns = cols, color_var = color_var, pal = pal, titles = titles
   )
 
 

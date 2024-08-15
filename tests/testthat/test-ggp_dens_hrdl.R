@@ -10,12 +10,9 @@ test_that("ggp_dens_hrdl", {
   flag_var <- "vente_tot_lg_oob"
   vals <- c("invalid" = "violet", "valid" = "mediumspringgreen")
   fun <- base::expm1
-  thm <- ggplot2::theme_minimal
 
   out <- ggp_den_hrdl(
-    data,
-    x_var = x_var, flag_var = flag_var, vals = vals,
-    fun = fun, thm = thm
+    data, x_var = x_var, flag_var = flag_var, vals = vals, fun = fun
   )
 
   expect_s3_class(out, class = "gg")

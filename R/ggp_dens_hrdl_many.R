@@ -1,6 +1,6 @@
-#' Many density plots for hurdle analysis
+#' Many density plots created with \code{ggp_den_hrdl} for hurdle analysis
 #'
-#' Many density plots for hurdle analysis.
+#' Many density plots created with \code{ggp_den_hrdl} for hurdle analysis.
 #'
 #' Many density plots for hurdle analysis all joined together using
 #' \pkg{patchwork}.
@@ -9,7 +9,10 @@
 #'
 #' @param cols Named character vector where the names are the value variables
 #'   and the string are the name of the falg variables.
+#' @param thm Theme used by \code{ggp_den_hrdl}.
 #' @param titles List of titles used by \code{labs}.
+#'
+#' @seealso [ggp_den_hrdl]
 #'
 #' @return Object of class \code{gg}.
 #' @export
@@ -29,8 +32,8 @@ ggp_den_hrdl_many <- function(
     .f = function(x, y) {
       data |>
         flrpkgGraphics::ggp_den_hrdl(
-          x_var = x, flag_var = y, vals = vals, fun = fun, thm = thm
-        )
+          x_var = x, flag_var = y, vals = vals, fun = fun
+        ) + thm()
     }
   )
   names(out) <- names(cols)
