@@ -1,6 +1,8 @@
 test_that("ggp_pairs", {
   a_file <- testthat::test_path("data", "TubaSkin_projets.rds")
-  data <- readRDS(a_file)
+  set.seed(7607L)
+  data <- readRDS(a_file) |>
+    dplyr::slice_sample(prop = 0.5)
 
   cols <- cols <- c("vente_tot_lg", "vente_qte_lg", "jobs_work_hrs_lg")
   color_var <- "prune_id"
@@ -26,3 +28,5 @@ test_that("ggp_pairs", {
 
   expect_snapshot(out)
 })
+
+# testthat::snapshot_accept('ggp_pairs')

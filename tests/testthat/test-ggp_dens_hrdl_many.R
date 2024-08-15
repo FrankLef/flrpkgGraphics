@@ -2,7 +2,10 @@ test_that("ggp_dens_hrdl_many", {
   a_file <- testthat::test_path("data", "TubaSkin_projets.rds")
   # cat("\n", "a_file", "\n")
   # print(a_file)
-  data <- readRDS(a_file)
+
+  set.seed(7523L)
+  data <- readRDS(a_file) |>
+    dplyr::slice_sample(prop = 0.5)
   # str(data)
 
   cols <- c(

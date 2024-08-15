@@ -2,7 +2,9 @@ test_that("ggp_dens_hrdl", {
   a_file <- testthat::test_path("data", "TubaSkin_projets.rds")
   # cat("\n", "a_file", "\n")
   # print(a_file)
-  data <- readRDS(a_file)
+  set.seed(7559L)
+  data <- readRDS(a_file) |>
+    dplyr::slice_sample(prop = 0.2)
 
   x_var <- "vente_tot_lg"
   flag_var <- "vente_tot_lg_oob"

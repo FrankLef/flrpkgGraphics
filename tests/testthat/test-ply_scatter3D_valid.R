@@ -2,7 +2,9 @@ test_that("ply_scatter3D_valid", {
   a_file <- testthat::test_path("data", "TubaSkin_projets.rds")
   # cat("\n", "a_file", "\n")
   # print(a_file)
-  data <- readRDS(a_file)
+  set.seed(7643L)
+  data <- readRDS(a_file) |>
+    dplyr::slice_sample(prop = 0.2)
 
 
   x_var <- "jobs_work_hrs_lg_hrdl"

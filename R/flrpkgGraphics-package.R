@@ -16,7 +16,13 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @import rlang
+#' @importFrom glue glue
+#' @importFrom lifecycle deprecated
 ## usethis namespace: end
 NULL
 
+# used by geom_density
 globalVariables(c("scaled"))
+# used by ggparty
+globalVariables(c("id", "splitvar", "nodesize"))
