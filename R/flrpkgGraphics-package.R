@@ -22,7 +22,8 @@
 ## usethis namespace: end
 NULL
 
-# used by geom_density
-globalVariables(c("scaled"))
+globalVariables(c("med"))
+# used by geom_density and geom_histogram
+globalVariables(c("scaled", "count"))
 # used by ggparty
 globalVariables(c("id", "splitvar", "nodesize"))
