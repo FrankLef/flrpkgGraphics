@@ -22,7 +22,6 @@
 #' TODO
 #' }
 ggp_pairs <- function(data, columns, color_var, pal, titles) {
-
   # draw the density lines on the diagonal
   myline <- function(data, mapping) {
     ggplot2::ggplot(data = data, mapping = mapping) +

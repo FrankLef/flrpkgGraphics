@@ -12,7 +12,8 @@ test_that("ggp_dens_hrdl", {
   fun <- base::expm1
 
   out <- ggp_den_hrdl(
-    data, x_var = x_var, flag_var = flag_var, vals = vals, fun = fun
+    data,
+    x_var = x_var, flag_var = flag_var, vals = vals, fun = fun
   )
 
   expect_s3_class(out, class = "gg")
