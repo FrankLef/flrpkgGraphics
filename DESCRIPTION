@@ -20,6 +20,7 @@ Imports:
     ggparty,
     ggplot2,
     glue,
+    labelled,
     lifecycle,
     patchwork,
     plotly,
