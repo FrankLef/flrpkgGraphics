@@ -33,7 +33,7 @@ ggp_den_hrdl_many <- function(
       data |>
         flrpkgGraphics::ggp_den_hrdl(
           x_var = x, flag_var = y, vals = vals, fun = fun
-        ) + thm()
+        ) + thm
     }
   )
   names(out) <- names(cols)

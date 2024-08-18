@@ -15,7 +15,7 @@ test_that("ggp_dens_hrdl_many", {
   )
   vals <- c("invalid" = "violet", "valid" = "mediumspringgreen")
   fun <- base::expm1
-  thm <- ggplot2::theme_minimal
+  thm <- ggplot2::theme_minimal()
   titles <- list(title = "Main Title", subtitle = "A subtitle")
 
   out <- ggp_den_hrdl_many(
