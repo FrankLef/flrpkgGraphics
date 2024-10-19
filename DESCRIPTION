@@ -22,9 +22,7 @@ Imports:
     glue,
     labelled,
     lifecycle,
-    patchwork,
     plotly,
-    purrr,
     rlang,
     scales,
     tidyselect
