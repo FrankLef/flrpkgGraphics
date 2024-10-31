@@ -5,11 +5,15 @@
 #' Matrix of plots with density plot on the diagonal, scatter plots on
 #' lower triangle and correlations on upper triangle.
 #'
-#' @param data Data.frame.
+#' @param data Data frame.
 #' @param columns Character() with name of columns to plot.
 #' @param color_var Variable to use to color by group.
 #' @param pal Color to use by \code{color_var}.
 #' @param titles List of titles.
+#' \describe{
+#'  \item{title}{Main title.}
+#'  \item{subtitle}{Subtitle.}
+#' }
 #'
 #' @return Object of class \code{gg}.
 #'

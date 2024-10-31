@@ -12,6 +12,11 @@
 #' @param pal Color palette for the group.
 #' @param fun Function to convert axes' labels.
 #' @param titles List of titles.
+#' \describe{
+#'  \item{title}{Main title.}
+#'  \item{subtitle}{Subtitle.}
+#'  \item{x, y}{Labels for x and y axis.}
+#' }
 #'
 #' @return Object of class \code{gg}.
 #' @export

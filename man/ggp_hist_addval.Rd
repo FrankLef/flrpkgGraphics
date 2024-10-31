@@ -30,7 +30,12 @@ ggp_hist_addval(
 
 \item{fun}{Function used to transform x-axis labels.}
 
-\item{titles}{List of plot titles.}
+\item{titles}{List of plot titles.
+\describe{
+\item{title}{Main title.}
+\item{subtitle}{Subtitle.}
+\item{x, y}{Labels for x and y axis.}
+}}
 }
 \value{
 Object of class \code{gg}.

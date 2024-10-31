@@ -19,7 +19,12 @@ ggp_scatter_addval(data, x_var, y_var, group_var, pal, fun, titles)
 
 \item{fun}{Function to convert axes' labels.}
 
-\item{titles}{List of titles.}
+\item{titles}{List of titles.
+\describe{
+\item{title}{Main title.}
+\item{subtitle}{Subtitle.}
+\item{x, y}{Labels for x and y axis.}
+}}
 }
 \value{
 Object of class \code{gg}.

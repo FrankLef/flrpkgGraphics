@@ -2,7 +2,7 @@
 #'
 #' Create a list of titles and axis labels.
 #'
-#' The list will only include the axis for which a variable is goven in
+#' The list will only include the axis for which a variable is defined in
 #' \code{...}. The labels are managed with the package \pkg{labelled}.
 #'
 #' @param data Data frame.

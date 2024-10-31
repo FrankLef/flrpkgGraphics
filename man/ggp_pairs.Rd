@@ -7,7 +7,7 @@
 ggp_pairs(data, columns, color_var, pal, titles)
 }
 \arguments{
-\item{data}{Data.frame.}
+\item{data}{Data frame.}
 
 \item{columns}{Character() with name of columns to plot.}
 
@@ -15,7 +15,11 @@ ggp_pairs(data, columns, color_var, pal, titles)
 
 \item{pal}{Color to use by \code{color_var}.}
 
-\item{titles}{List of titles.}
+\item{titles}{List of titles.
+\describe{
+\item{title}{Main title.}
+\item{subtitle}{Subtitle.}
+}}
 }
 \value{
 Object of class \code{gg}.

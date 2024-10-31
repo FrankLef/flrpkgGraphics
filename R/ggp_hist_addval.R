@@ -12,6 +12,11 @@
 #' @param pal Palette of colors used by group.
 #' @param fun Function used to transform x-axis labels.
 #' @param titles List of plot titles.
+#' \describe{
+#'  \item{title}{Main title.}
+#'  \item{subtitle}{Subtitle.}
+#'  \item{x, y}{Labels for x and y axis.}
+#' }
 #'
 #' @return Object of class \code{gg}.
 #' @export
