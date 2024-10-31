@@ -14,7 +14,7 @@
 #' \describe{
 #'  \item{groups}{Palette of colors for the groups.}
 #'  \item{title}{Color of title.}
-#'  \item{backgroung}{Color of background.}
+#'  \item{background}{Color of background.}
 #' }
 #' @param size Size of markers.
 #' @param fun Function used to transform values on the scale. Default is

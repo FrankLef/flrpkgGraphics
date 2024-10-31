@@ -35,7 +35,7 @@ ply_scatter3D_group(
 \describe{
 \item{groups}{Palette of colors for the groups.}
 \item{title}{Color of title.}
-\item{backgroung}{Color of background.}
+\item{background}{Color of background.}
 }}
 
 \item{size}{Size of markers.}

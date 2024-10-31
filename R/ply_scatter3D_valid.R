@@ -14,7 +14,7 @@
 #' \describe{
 #'  \item{prune}{Palette of prune flags.}
 #'  \item{title}{Color of title.}
-#'  \item{backgroung}{Color of background.}
+#'  \item{background}{Color of background.}
 #' }
 #' @param fun Function used to transform values on the scale. Default is
 #'   \code{identity()}. Often used is \code{ceiling(flrpkgTools::expm1s())}.

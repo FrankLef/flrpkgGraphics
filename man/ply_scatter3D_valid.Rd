@@ -33,7 +33,7 @@ ply_scatter3D_valid(
 \describe{
 \item{prune}{Palette of prune flags.}
 \item{title}{Color of title.}
-\item{backgroung}{Color of background.}
+\item{background}{Color of background.}
 }}
 
 \item{fun}{Function used to transform values on the scale. Default is
