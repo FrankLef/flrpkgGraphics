@@ -29,7 +29,12 @@ ply_scatter3D_valid(
 
 \item{color_var}{String with name of color variable.}
 
-\item{colrs}{List with colors.}
+\item{colrs}{List with colors.
+\describe{
+\item{prune}{Palette of prune flags.}
+\item{title}{color of title.}
+\item{backgroung}{Color of background.}
+}}
 
 \item{fun}{Function used to tranform values on the scale. default is i
 \code{dentity()}.}

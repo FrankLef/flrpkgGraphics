@@ -11,6 +11,11 @@
 #' @param z_var String with name of z variable.
 #' @param color_var String with name of color variable.
 #' @param colrs List with colors.
+#' \describe{
+#'  \item{prune}{Palette of prune flags.}
+#'  \item{title}{color of title.}
+#'  \item{backgroung}{Color of background.}
+#' }
 #' @param fun Function used to tranform values on the scale. default is i
 #'   \code{dentity()}.
 #' @param titles List of titles.
